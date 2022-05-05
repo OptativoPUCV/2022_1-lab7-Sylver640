@@ -35,12 +35,13 @@ void heap_push(Heap* pq, void* data, int priority){
 
    int auxSize = pq->size;
    heapElem aux = pq->heapArray[auxSize];
+   heapElem auxFather = pq->heapArray[(auxSize-1)/2];
 
-   while (pq->heapArray[(pq->size-1)/2].priority > aux.priority)
+   while (aux.priority > auxFather.priority)
    {
       aux = pq->heapArray[auxSize];
-      aux = pq->heapArray[(pq->size-1)/2];
-      pq->heapArray[(pq->size-1)/2] = aux;
+      aux = auxFather;
+      auxFather = aux;
 
       auxSize = auxSize/2;
    }
