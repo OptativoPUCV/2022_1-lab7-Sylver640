@@ -44,7 +44,7 @@ void heap_push(Heap* pq, void* data, int priority){
    }
    printf("]\n");
 
-   while (aux.priority > auxFather.priority)
+   while (aux.priority > auxFather.priority || auxSize > 0)
    {
       aux = pq->heapArray[auxSize];
       aux = auxFather;
