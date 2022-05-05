@@ -51,6 +51,13 @@ void heap_push(Heap* pq, void* data, int priority){
       auxFather = aux;
 
       auxSize = auxSize/2;
+      printf("prioridad durante while: ");
+      printf("[%i ", pq->heapArray[0].priority);
+      for (int i = 1; i < pq->size; i++)
+      {
+         printf("%i ", pq->heapArray[i].priority);  
+      }
+      printf("]\n");
    }
 }
 
