@@ -103,3 +103,9 @@ heap.c:40:4: error: expected ',' or ';' before 'printf'
     ^~~~~~
 Compilation failed
 0373818
+Thu May  5 12:26:47 HSP 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|2
+total_score: 20/70
+b801b8e
