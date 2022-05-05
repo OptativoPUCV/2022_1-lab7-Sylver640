@@ -93,3 +93,13 @@ Thu May  5 12:17:37 HSP 2022:
  tests:  2|2
 total_score: 20/70
 ad28974
+Thu May  5 12:26:37 HSP 2022: 
+ heap.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function 'heap_push':
+heap.c:40:4: error: expected ',' or ';' before 'printf'
+    printf("prioridad antes de while: ");
+    ^~~~~~
+Compilation failed
+0373818
