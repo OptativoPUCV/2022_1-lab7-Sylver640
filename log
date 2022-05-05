@@ -3,3 +3,9 @@ Thu May  5 11:22:29 HSP 2022:
  1 file changed, 6 insertions(+), 1 deletion(-)
  tests:  0|0
 8c80338
+Thu May  5 11:23:44 HSP 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|3
+total_score: 10/70
+9010ccc
