@@ -31,7 +31,6 @@ void heap_push(Heap* pq, void* data, int priority){
 
    pq->heapArray[pq->size].data = data;
    pq->heapArray[pq->size].priority = priority;
-   pq->size++;
 
    int auxSize = pq->size;
    int auxFatherSize = ((pq->size-1)/2);
@@ -55,6 +54,7 @@ void heap_push(Heap* pq, void* data, int priority){
       }
       printf("]\n");*/
    }
+   pq->size++;
 }
 
 void heap_pop(Heap* pq){
