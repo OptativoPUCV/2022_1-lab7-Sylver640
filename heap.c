@@ -29,21 +29,14 @@ void heap_push(Heap* pq, void* data, int priority){
       pq->heapArray = realloc(pq->heapArray, pq->capac);
    }
 
-   pq->heapArray[pq->size+1].data = data;
-   pq->heapArray[pq->size+1].priority = priority;
+   pq->heapArray[pq->size].data = data;
+   pq->heapArray[pq->size].priority = priority;
    pq->size++;
 
    int auxSize = pq->size;
    int auxFatherSize = ((auxSize-1)/2);
    //heapElem aux = pq->heapArray[auxSize];
    //heapElem auxFather = pq->heapArray[(auxSize-1)/2];
-   printf("prioridad antes de while: ");
-   printf("[%i ", pq->heapArray[0].priority);
-   for (int i = 1; i <= pq->size; i++)
-   {
-      printf("%i ", pq->heapArray[i].priority);  
-   }
-   printf("]\n");
 
    while (auxSize > 0)
    {
@@ -53,10 +46,10 @@ void heap_push(Heap* pq, void* data, int priority){
          pq->heapArray[auxSize] = pq->heapArray[auxFatherSize];
       }
       auxSize = auxFatherSize;
-      auxSize = auxSize/2;
+      auxFatherSize = (auxFatherSize-1)/2;
       printf("prioridad durante while: ");
       printf("[%i ", pq->heapArray[0].priority);
-      for (int i = 1; i <= pq->size; i++)
+      for (int i = 0; i < pq->size; i++)
       {
          printf("%i ", pq->heapArray[i].priority);  
       }

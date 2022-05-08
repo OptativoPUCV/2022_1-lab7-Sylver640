@@ -114,3 +114,9 @@ Thu May  5 23:30:51 HSP 2022:
  1 file changed, 1 insertion(+)
  tests:  0|0
 prioridad durantcc922c6
+Sat May  7 20:14:32 HSP 2022: 
+ heap.c | 15 ++++-----------
+ 1 file changed, 4 insertions(+), 11 deletions(-)
+ tests:  3|2
+total_score: 25/70
+61c5f6d
