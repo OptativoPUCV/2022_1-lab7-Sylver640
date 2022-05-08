@@ -34,7 +34,7 @@ void heap_push(Heap* pq, void* data, int priority){
    pq->size++;
 
    int auxSize = pq->size;
-   int auxFatherSize = ((auxSize-1)/2);
+   int auxFatherSize = ((pq->size-1)/2);
    heapElem* aux = (heapElem*) malloc (sizeof(heapElem));
 
    while (auxSize > 0)
