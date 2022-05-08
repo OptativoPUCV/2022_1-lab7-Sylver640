@@ -35,15 +35,15 @@ void heap_push(Heap* pq, void* data, int priority){
 
    int auxSize = pq->size;
    int auxFatherSize = ((auxSize-1)/2);
-   //heapElem aux = pq->heapArray[auxSize];
-   //heapElem auxFather = pq->heapArray[(auxSize-1)/2];
+   heapElem* aux = (heapElem*) malloc (sizeof(heapElem));
 
    while (auxSize > 0)
    {
       if (pq->heapArray[auxSize].priority > pq->heapArray[auxFatherSize].priority)
       {
+         *aux = pq->heapArray[auxFatherSize];
          pq->heapArray[auxFatherSize] = pq->heapArray[auxSize];
-         pq->heapArray[auxSize] = pq->heapArray[auxFatherSize];
+         pq->heapArray[auxSize] = *aux;
       }
       auxSize = auxFatherSize;
       auxFatherSize = (auxSize-1)/2;
