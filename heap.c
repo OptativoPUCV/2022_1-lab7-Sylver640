@@ -70,9 +70,18 @@ void heap_pop(Heap* pq){
          pq->heapArray[youngerAux] = *aux;
 
          auxSize = youngerAux;
-         youngerAux = 2*auxSize + 1;
-         olderAux = 2*auxSize + 2;
-         continue;
+         youngerAux = (2*auxSize) + 1;
+         olderAux = (2*auxSize) + 2;
+      }
+      if (pq->heapArray[auxSize].priority < pq->heapArray[olderAux].priority && pq->heapArray[olderAux].priority > pq->heapArray[youngerAux].priority)
+      {
+         *aux = pq->heapArray[auxSize];
+         pq->heapArray[auxSize] = pq->heapArray[olderAux];
+         pq->heapArray[olderAux] = *aux;
+
+         auxSize = olderAux;
+         youngerAux = (2*auxSize) + 1;
+         olderAux = (2*auxSize) + 2;
       }
    }
 }
