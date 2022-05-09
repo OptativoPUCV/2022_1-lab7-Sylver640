@@ -168,3 +168,20 @@ Sun May  8 22:13:33 HSP 2022:
  tests:  7|1
 total_score: 45/70
 9b8badf
+Sun May  8 22:23:52 HSP 2022: 
+ heap.c | 14 +++++++++++---
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function 'heap_pop':
+heap.c:63:8: error: unused variable 'olderAux' [-Werror=unused-variable]
+    int olderAux = 2*(auxSize) + 2;
+        ^~~~~~~~
+heap.c:62:8: error: unused variable 'youngerAux' [-Werror=unused-variable]
+    int youngerAux = 2*(auxSize) + 1;
+        ^~~~~~~~~~
+heap.c:54:14: error: unused variable 'aux' [-Werror=unused-variable]
+    heapElem* aux = (heapElem*) malloc (sizeof(heapElem));
+              ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+4bd1745
