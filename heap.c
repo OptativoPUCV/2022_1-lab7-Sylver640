@@ -58,10 +58,10 @@ void heap_pop(Heap* pq){
    //pq->heapArray[pq->size] = *aux;
    pq->size--;
 
-   int auxSize = 0;
+   /*int auxSize = 0;
    int youngerAux = 2*(auxSize) + 1;
    int olderAux = 2*(auxSize) + 2; 
-   /*while (auxSize < pq->size)
+   while (auxSize < pq->size)
    {
       if (pq->heapArray[auxSize] < 0)
 
